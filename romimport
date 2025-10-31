@@ -26,7 +26,4 @@ time /mnt/user/appdata/igir-portable/igir \
   -i "${INPUT_DIR}/" \
   -i "${OUTPUT_DIR}/" \
   -o "${OUTPUT_DIR}/{romm}/" \
-  --input-checksum-quick false \
-  --input-checksum-min CRC32 \
-  --input-checksum-max SHA256 \
-  --only-retail
+  --no-bios
