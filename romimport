@@ -3,11 +3,10 @@
 # https://igir.io/usage/desktop/romm/
 
 set -ou pipefail
+cd "/mnt/user/games"
 
-INPUT_DIR="$1"
-OUTPUT_DIR="$2"
-
-cd $INPUT_DIR
+INPUT_DIR=romimport
+OUTPUT_DIR=roms
 
 # dats
 # https://datomatic.no-intro.org/index.php?page=download&op=daily&s=64
