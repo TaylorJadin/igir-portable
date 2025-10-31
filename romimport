@@ -5,8 +5,8 @@
 set -ou pipefail
 cd "/mnt/user/games"
 
-INPUT_DIR=romimport
-OUTPUT_DIR=roms
+INPUT_DIR=/mnt/user/games/romimport
+OUTPUT_DIR=/mnt/user/games/roms
 
 # dats
 # https://datomatic.no-intro.org/index.php?page=download&op=daily&s=64
