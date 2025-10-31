@@ -7,6 +7,8 @@ set -ou pipefail
 INPUT_DIR="$1"
 OUTPUT_DIR="$2"
 
+cd $INPUT_DIR
+
 # dats
 # https://datomatic.no-intro.org/index.php?page=download&op=daily&s=64
 # - Select P/C then Request
