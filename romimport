@@ -16,13 +16,15 @@ OUTPUT_DIR=/mnt/user/games/roms
 
 # Documentation: https://igir.io/
 # Uses dat files: https://datomatic.no-intro.org/index.php?page=download&op=daily
-time igir \
+time /mnt/user/appdata/igir-portable/igir \
   move \
   zip \
-  report \
   test \
+  clean \
+  report \
   -d dats/ \
   -i "${INPUT_DIR}/" \
+  -i "${OUTPUT_DIR}/" \
   -o "${OUTPUT_DIR}/{romm}/" \
   --input-checksum-quick false \
   --input-checksum-min CRC32 \
