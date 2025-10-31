@@ -26,4 +26,5 @@ time /mnt/user/appdata/igir-portable/igir \
   -i "${INPUT_DIR}/" \
   -i "${OUTPUT_DIR}/" \
   -o "${OUTPUT_DIR}/{romm}/" \
-  --no-bios
+  --no-bios \
+  --dat-threads 1
