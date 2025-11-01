@@ -14,8 +14,6 @@ OUTPUT_DIR=/mnt/user/games/roms
 #
 # http://redump.org/downloads/
 
-# Documentation: https://igir.io/
-# Uses dat files: https://datomatic.no-intro.org/index.php?page=download&op=daily
 time /mnt/user/appdata/igir-portable/igir \
   move \
   zip \
@@ -28,3 +26,11 @@ time /mnt/user/appdata/igir-portable/igir \
   -o "${OUTPUT_DIR}/{romm}/" \
   --no-bios \
   --dat-threads 1
+  --input-checksum-max CRC32 \
+  --input-checksum-archives never \
+  --overwrite-invalid \
+  --only-retail \
+  --single \
+  --prefer-language EN \
+  --prefer-region USA,WORLD,EUR,JPN \
+  --prefer-revision newer
