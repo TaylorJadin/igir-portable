@@ -14,9 +14,9 @@ OUTPUT_DIR=/mnt/user/games/roms
 #
 # http://redump.org/downloads/
 
-time /mnt/user/appdata/igir-portable/igir \
-  move \
-  zip \
+/mnt/user/appdata/igir-portable/igir \
+  copy \
+  exract \
   test \
   clean \
   report \
@@ -25,12 +25,10 @@ time /mnt/user/appdata/igir-portable/igir \
   -i "${OUTPUT_DIR}/" \
   -o "${OUTPUT_DIR}/{romm}/" \
   --no-bios \
-  --dat-threads 1
-  --input-checksum-max CRC32 \
-  --input-checksum-archives never \
   --overwrite-invalid \
   --only-retail \
   --single \
   --prefer-language EN \
   --prefer-region USA,WORLD,EUR,JPN \
+  --prefer-retail \
   --prefer-revision newer
