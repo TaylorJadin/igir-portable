@@ -16,7 +16,7 @@ OUTPUT_DIR=/mnt/user/games/roms
 
 /mnt/user/appdata/igir-portable/igir \
   copy \
-  exract \
+  zip \
   test \
   clean \
   report \
