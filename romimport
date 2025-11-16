@@ -23,6 +23,8 @@ OUTPUT_DIR=/mnt/user/games/roms
   -d dats/ \
   -i "${INPUT_DIR}/" \
   -i "${OUTPUT_DIR}/" \
+  --input-checksum-max CRC32 \
+  --input-checksum-archives never \
   -o "${OUTPUT_DIR}/{romm}/" \
   --no-bios \
   --overwrite-invalid \
