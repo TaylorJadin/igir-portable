@@ -1,4 +1,4 @@
-save_sync="rsync -rLi --times --update"
+#!/usr/bin/env bash
 unraid_games=/mnt/unraid-games
 
 # Check if $unraid_games mountpoint is working
@@ -17,12 +17,8 @@ fi
 
 saves() {
   echo "--> Backing up Memories and Saves from Pocket"
-  $save_sync ./Memories/ $unraid_games/saves/pocket/Memories/
-  $save_sync ./Saves/ $unraid_games/saves/pocket/Saves/
-  echo ""
-  echo "--> Updating Pocket with missing saves"
-  $save_sync $unraid_games/saves/pocket/Memories/ ./Memories/
-  $save_sync $unraid_games/saves/pocket/Saves/ ./Saves/
+  rsync -rLi --times --update --delete ./Memories/ $unraid_games/saves/pocket/Memories/
+  rsync -rLi --times --update --delete ./Saves/ $unraid_games/saves/pocket/Saves/
 }
 
 roms() {
