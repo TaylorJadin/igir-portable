@@ -26,6 +26,7 @@ cd $BASE_DIR
   --input-checksum-archives never \
   -o $BASE_DIR/roms/No-Intro/ \
   --dir-dat-name \
+  --dat-threads 1 \
   --no-bios \
   --overwrite-invalid \
   --only-retail \
@@ -52,6 +53,7 @@ cd $BASE_DIR
   --input-checksum-archives never \
   -o $BASE_DIR/roms/Redump/ \
   --dir-dat-name \
+  --dat-threads 1 \
   --no-bios \
   --overwrite-invalid \
   --only-retail \
