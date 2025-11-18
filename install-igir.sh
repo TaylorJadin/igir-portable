@@ -67,4 +67,10 @@ mkdir -p "$INSTALL_DIR"
 mv igir "$INSTALL_DIR/"
 chmod +x "$INSTALL_DIR/igir"
 
+# Symlink igir if ~/Git/dotfiles/bin exists
+if [ -d "$HOME/Git/dotfiles/bin" ]; then
+  ln -sf "$INSTALL_DIR/igir" "$HOME/Git/dotfiles/bin/igir"
+  echo "Symlinked igir to $HOME/Git/dotfiles/bin/igir"
+  fi
+
 echo "✓ igir installed"
