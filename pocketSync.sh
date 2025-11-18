@@ -29,9 +29,9 @@ roms() {
   echo ""
   echo "--> Copying roms to Pocket"
   igir copy extract test clean \
-    -d $unraid_games/romimport/dats/No-Intro*.zip \
+    --dat $unraid_games/romimport/dats/No-Intro*.zip \
     --dat-name-regex-exclude "/encrypted|source code|headerless/i" \
-    -i $unraid_games/roms/No-Intro/ \
+    --input $unraid_games/roms/No-Intro/ \
     --output "./Assets/{pocket}/common/" \
     --dir-letter \
     --dir-letter-limit 1000 \
