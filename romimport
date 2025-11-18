@@ -3,10 +3,10 @@
 # https://igir.io/usage/desktop/romm/
 
 set -ou pipefail
-cd "/mnt/user/games"
 
-INPUT_DIR=/mnt/user/games/romimport
-OUTPUT_DIR=/mnt/user/games/roms
+BASE_DIR=/mnt/user/games
+
+cd $BASE_DIR
 
 # dats
 # https://datomatic.no-intro.org/index.php?page=download&op=daily&s=64
@@ -15,15 +15,18 @@ OUTPUT_DIR=/mnt/user/games/roms
 # http://redump.org/downloads/
 
 /mnt/user/appdata/igir-portable/igir \
-  copy \
+  move \
   extract \
   test \
   clean \
   report \
-  -d dats/ \
-  -i "${INPUT_DIR}/" \
-  -i "${OUTPUT_DIR}/" \
-  -o "${OUTPUT_DIR}/{romm}/" \
+  -d $BASE_DIR/dats/No-Intro*.zip \
+  --dat-name-regex-exclude "/encrypted|source code/i" \
+  -i $BASE_DIR/romimport/No-Intro/ \
+  -i $BASE_DIR/roms/No-Intro/ \
+  --input-checksum-max CRC32 \
+  --input-checksum-archives never \
+  -o $BASE_DIR/roms/No-Intro/ \
   --no-bios \
   --overwrite-invalid \
   --only-retail \
