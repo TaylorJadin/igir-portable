@@ -77,7 +77,6 @@ no_intro_dirs=(
 redump_dirs=(
 )
 
-
 for dir in "${no_intro_dirs[@]}"
 do
 /mnt/user/appdata/rclone-portable/rclone \
