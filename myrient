@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+rclone sync myrient:"/files/$1" "/mnt/user/games/romimport/$1" -v --multi-thread-streams 0
