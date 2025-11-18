@@ -74,11 +74,24 @@ no_intro_dirs=(
 "Sega - Mega Drive - Genesis (Private)/"
 )
 
+redump_dirs=(
+)
+
+
 for dir in "${no_intro_dirs[@]}"
 do
 /mnt/user/appdata/rclone-portable/rclone \
 	sync \
 	myrient:"/files/No-Intro/$dir" \
 	"/mnt/user/games/romimport/No-Intro/$dir" \
+	-v --multi-thread-streams 0
+done
+
+for dir in "${redium_dirs[@]}"
+do
+/mnt/user/appdata/rclone-portable/rclone \
+	sync \
+	myrient:"files/Redump/$dir" \
+	"/mnt/user/games/romimport/Redump/$dir" \
 	-v --multi-thread-streams 0
 done

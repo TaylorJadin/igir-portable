@@ -8,19 +8,17 @@ BASE_DIR=/mnt/user/games
 
 cd $BASE_DIR
 
-# dats
+# No-Intro 
 # https://datomatic.no-intro.org/index.php?page=download&op=daily&s=64
 # - Select P/C then Request
-#
-# http://redump.org/downloads/
 
 /mnt/user/appdata/igir-portable/igir \
-  move \
+  copy \
   extract \
   test \
   clean \
   report \
-  -d $BASE_DIR/dats/No-Intro*.zip \
+  -d $BASE_DIR/romimport/dats/No-Intro*.zip \
   --dat-name-regex-exclude "/encrypted|source code/i" \
   -i $BASE_DIR/romimport/No-Intro/ \
   -i $BASE_DIR/roms/No-Intro/ \
@@ -36,3 +34,30 @@ cd $BASE_DIR
   --prefer-region USA,WORLD,EUR,JPN \
   --prefer-retail \
   --prefer-revision newer
+
+# redump
+# http://redump.org/downloads/
+
+/mnt/user/appdata/igir-portable/igir \
+  copy \
+  extract \
+  test \
+  clean \
+  report \
+  -d $BASE_DIR/romimport/dats/Redump/* \
+  --dat-name-regex-exclude "/encrypted|source code/i" \
+  -i $BASE_DIR/romimport/Redump/ \
+  -i $BASE_DIR/roms/Redump/ \
+  --input-checksum-max CRC32 \
+  --input-checksum-archives never \
+  -o $BASE_DIR/roms/Redump/ \
+  --dir-dat-name \
+  --no-bios \
+  --overwrite-invalid \
+  --only-retail \
+  --single \
+  --prefer-language EN \
+  --prefer-region USA,WORLD,EUR,JPN \
+  --prefer-retail \
+  --prefer-revision newer
+
