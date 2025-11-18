@@ -13,7 +13,7 @@ cd $BASE_DIR
 # - Select P/C then Request
 
 /mnt/user/appdata/igir-portable/igir \
-  copy \
+  move \
   extract \
   test \
   clean \
@@ -39,7 +39,7 @@ cd $BASE_DIR
 # http://redump.org/downloads/
 
 /mnt/user/appdata/igir-portable/igir \
-  copy \
+  move \
   extract \
   test \
   clean \
