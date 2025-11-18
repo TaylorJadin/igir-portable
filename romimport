@@ -27,6 +27,7 @@ cd $BASE_DIR
   --input-checksum-max CRC32 \
   --input-checksum-archives never \
   -o $BASE_DIR/roms/No-Intro/ \
+  --dir-dat-name \
   --no-bios \
   --overwrite-invalid \
   --only-retail \
