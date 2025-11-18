@@ -34,7 +34,7 @@ cd $BASE_DIR
   --prefer-language EN \
   --prefer-region USA,WORLD,EUR,JPN \
   --prefer-retail \
-  --prefer-revision newer
+  --prefer-parent
 
 # redump
 # http://redump.org/downloads/
@@ -61,5 +61,5 @@ cd $BASE_DIR
   --prefer-language EN \
   --prefer-region USA,WORLD,EUR,JPN \
   --prefer-retail \
-  --prefer-revision newer
-
+  --prefer-parent
+ 
