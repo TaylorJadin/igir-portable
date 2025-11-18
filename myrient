@@ -1,2 +1,6 @@
 #!/usr/bin/env bash
-rclone sync myrient:"/files/$1" "/mnt/user/games/romimport/$1" -v --multi-thread-streams 0
+
+for path in "$@"
+do
+/mnt/user/appdata/rclone-portable/rclone sync myrient:"/files/$path" "/mnt/user/games/romimport/$path" -v --multi-thread-streams 0
+done
