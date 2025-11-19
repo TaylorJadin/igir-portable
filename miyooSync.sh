@@ -16,7 +16,7 @@ if [ ! -d "./Bios" ] || [ ! -d "./Roms" ] || [ ! -d "./Saves" ] || [ ! -d "./Too
 fi
 
 saves() {
-  rsync -rLi --times --update --delete ./Saves/ $unraid_games/saves/miyoo/Saves/
+  rsync -rLi --times --update --delete ./Saves/ $unraid_games/saves/miyoo/
 }
 
 roms() {
