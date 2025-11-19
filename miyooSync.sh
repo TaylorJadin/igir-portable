@@ -16,7 +16,9 @@ if [ ! -d "./Bios" ] || [ ! -d "./Roms" ] || [ ! -d "./Saves" ] || [ ! -d "./Too
 fi
 
 saves() {
-  rsync -rLi --times --update --delete ./Saves/ $unraid_games/saves/miyoo/
+  echo ""
+  echo "--> Backing up saves"
+  rsync -rLi --update --delete ./Saves/ $unraid_games/saves/miyoo/
 }
 
 roms() {
@@ -56,14 +58,10 @@ else
   while [ "$1" != "" ]; do
   case $1 in
     -r | --roms ) shift
-                  echo "--> Roms"
                   roms
-                  echo ""
                   ;;
     -s | --saves) shift
-                  echo "--> Saves"
                   saves
-                  echo ""
                   ;;
     -h | --help ) usage
                   exit

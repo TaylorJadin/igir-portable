@@ -16,6 +16,8 @@ if [ ! -d "./Assets" ] || [ ! -d "./Cores" ] || [ ! -d "./Memories" ] || [ ! -d 
 fi
 
 saves() {
+  echo ""
+  echo "--> Backing up saves"
   rsync -rLi --times --update --delete ./Memories/ $unraid_games/saves/pocket/Memories/
   rsync -rLi --times --update --delete ./Saves/ $unraid_games/saves/pocket/Saves/
 }
