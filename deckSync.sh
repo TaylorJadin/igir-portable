@@ -16,7 +16,8 @@ fi
 saves() {
   echo ""
   echo "--> Backing up saves"
-  rsync -rLi --update --delete ./Saves/ $unraid_games/saves/deck/
+  rsync -rLi --update --delete ./retrodeck/saves/ $unraid_games/saves/retrodeck/saves/
+  rsync -rLi --update --delete ./retrodeck/states/ $unraid_games/saves/retrodeck/states/
 }
 
 roms() {
@@ -26,7 +27,7 @@ roms() {
     --dat $unraid_games/romimport/dats/No-Intro*.zip \
     --dat-name-regex-exclude "/encrypted|source code|headerless|MSX/i" \
     --input $unraid_games/roms/No-Intro/ \
-    --output "./Retrodeck/roms/{retrodeck}" \
+    --output "./retrodeck/roms/{retrodeck}" \
     --dat-threads 1 \
     --no-bios \
     --overwrite-invalid \
