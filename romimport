@@ -19,7 +19,7 @@ cd $BASE_DIR
   clean \
   report \
   -d $BASE_DIR/romimport/dats/No-Intro*.zip \
-  --dat-name-regex-exclude "/encrypted|source code|headerless/i" \
+  --dat-name-regex-exclude "/encrypted|source code|headerless|ByteSwapped|8-bit Family|MSX/i" \
   -i $BASE_DIR/romimport/No-Intro/ \
   -i $BASE_DIR/roms/No-Intro/ \
   --input-checksum-max CRC32 \
