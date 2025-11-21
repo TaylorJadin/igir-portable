@@ -8,7 +8,7 @@ if [ ! -d "$unraid_games" ] || [ ! -d "$unraid_games/romimport" ] || [ ! -d "$un
 fi
 
 # Check if we are really on the MinUI SD card
-if [ ! -d "./Bios" ] || [ ! -d "./Roms" ] || [ ! -d "./Saves" ] || [ ! -d "./Tools" ]; then
+if [ ! -d "./retrodeck" ]; then
   echo "Error: This script must be run from the root of the Steam Deck microSD card."
   exit 1
 fi
