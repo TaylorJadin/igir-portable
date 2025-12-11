@@ -41,7 +41,6 @@ cd $BASE_DIR
 
 /mnt/user/appdata/igir-portable/igir \
   move \
-  extract \
   test \
   clean \
   report \
