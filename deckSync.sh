@@ -8,7 +8,7 @@ if [ ! -d "$unraid_games" ] || [ ! -d "$unraid_games/romimport" ] || [ ! -d "$un
 fi
 
 # Check if we are really on the MinUI SD card
-if [ ! -d "./Bios" ] || [ ! -d "./Roms" ] || [ ! -d "./Saves" ] || [ ! -d "./Tools" ]; then
+if [ ! -d "./retrodeck" ]; then
   echo "Error: This script must be run from the root of the Steam Deck microSD card."
   exit 1
 fi
@@ -16,7 +16,8 @@ fi
 saves() {
   echo ""
   echo "--> Backing up saves"
-  rsync -rLi --update --delete ./Saves/ $unraid_games/saves/deck/
+  rsync -rLi --update --delete ./retrodeck/saves/ $unraid_games/saves/retrodeck/saves/
+  rsync -rLi --update --delete ./retrodeck/states/ $unraid_games/saves/retrodeck/states/
 }
 
 roms() {
@@ -24,9 +25,9 @@ roms() {
   echo "--> Copying roms to Steam Deck"
   igir copy extract test clean \
     --dat $unraid_games/romimport/dats/No-Intro*.zip \
-    --dat-name-regex-exclude "/encrypted|source code|headerless|MSX/i" \
+    --dat-name-regex-exclude "/encrypted|source code|headerless|ByteSwapped|8-bit Family|MSX/i" \
     --input $unraid_games/roms/No-Intro/ \
-    --output "./Retrodeck/roms/{retrodeck}" \
+    --output "./retrodeck/roms/{retrodeck}" \
     --dat-threads 1 \
     --no-bios \
     --overwrite-invalid \

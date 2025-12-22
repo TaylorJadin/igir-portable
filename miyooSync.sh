@@ -26,10 +26,9 @@ roms() {
   echo "--> Copying roms to Miyoo Mini Plus"
   igir copy extract test clean \
     --dat $unraid_games/romimport/dats/No-Intro*.zip \
-    --dat-name-regex-exclude "/encrypted|source code|headerless|MSX/i" \
+    --dat-name-regex-exclude "/encrypted|source code|headerless|ByteSwapped|8-bit Family|MSX/i" \
     --input $unraid_games/roms/No-Intro/ \
     --output "./roms/{minui}" \
-    --dir-letter \
     --dat-threads 1 \
     --no-bios \
     --overwrite-invalid \
