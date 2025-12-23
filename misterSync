@@ -9,14 +9,14 @@ BASE_DIR=/mnt/user/games
 cd $BASE_DIR
 
 /mnt/user/appdata/igir-portable/igir \
-  link \
+  link clean \
   --link-mode symlink \
   -d $BASE_DIR/romimport/dats/No-Intro*.zip \
   --dat-name-regex-exclude "/encrypted|source code|headerless|ByteSwapped|8-bit Family|MSX/i" \
   -i $BASE_DIR/roms/No-Intro/ \
   --input-checksum-max CRC32 \
   --input-checksum-archives never \
-  -o $BASE_DIR/roms/mister/{mister}/ \
+  -o $BASE_DIR/mister/{mister}/ \
   --dir-letter \
   --dat-threads 1 \
   --no-bios \
@@ -29,14 +29,14 @@ cd $BASE_DIR
   --prefer-parent
 
 /mnt/user/appdata/igir-portable/igir \
-  link \
+  link clean \
   --link-mode symlink \
   -d $BASE_DIR/romimport/dats/Redump/* \
-  --dat-name-regex-exclude "/encrypted|source code|headerless|MSX/i" \
+  --dat-name-regex-exclude "/encrypted|source code|headerless|ByteSwapped|8-bit Family|MSX/i" \
   -i $BASE_DIR/roms/Redump/ \
   --input-checksum-max CRC32 \
   --input-checksum-archives never \
-  -o $BASE_DIR/roms/mister/{mister}/ \
+  -o $BASE_DIR/mister/{mister}/ \
   --dir-letter \
   --dat-threads 1 \
   --no-bios \

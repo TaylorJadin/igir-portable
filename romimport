@@ -45,7 +45,7 @@ cd $BASE_DIR
   clean \
   report \
   -d $BASE_DIR/romimport/dats/Redump/* \
-  --dat-name-regex-exclude "/encrypted|source code|headerless|MSX/i" \
+  --dat-name-regex-exclude "/encrypted|source code|headerless|ByteSwapped|8-bit Family|MSX/i" \
   -i $BASE_DIR/romimport/Redump/ \
   -i $BASE_DIR/roms/Redump/ \
   --input-checksum-max CRC32 \

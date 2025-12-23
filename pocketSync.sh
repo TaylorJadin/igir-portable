@@ -25,7 +25,7 @@ saves() {
 roms() {
   echo ""
   echo "--> Copying roms to Pocket"
-  igir copy extract test clean \
+  igir copy extract clean \
     --dat $unraid_games/romimport/dats/No-Intro*.zip \
     --dat-name-regex-exclude "/encrypted|source code|headerless|ByteSwapped|8-bit Family|MSX/i" \
     --input $unraid_games/roms/No-Intro/ \
