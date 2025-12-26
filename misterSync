@@ -16,7 +16,7 @@ cd $BASE_DIR
   -i $BASE_DIR/roms/No-Intro/ \
   --input-checksum-max CRC32 \
   --input-checksum-archives never \
-  -o $BASE_DIR/mister/{mister}/ \
+  -o $BASE_DIR/mister/games/{mister}/ \
   --dir-letter \
   --dat-threads 1 \
   --no-bios \
@@ -36,7 +36,7 @@ cd $BASE_DIR
   -i $BASE_DIR/roms/Redump/ \
   --input-checksum-max CRC32 \
   --input-checksum-archives never \
-  -o $BASE_DIR/mister/{mister}/ \
+  -o $BASE_DIR/mister/games/{mister}/ \
   --dir-letter \
   --dat-threads 1 \
   --no-bios \
